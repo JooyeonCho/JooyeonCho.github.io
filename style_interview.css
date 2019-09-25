@@ -37,8 +37,8 @@ p{
 }
 .author {
   font-size: 20px;
-  font-family: 'playfair Display', serif;
-  font-weight: 400;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
   font-style: italic;
   position: absolute;
   top: 90%;
@@ -47,8 +47,8 @@ p{
 }
 .interviewer {
 	color: white;
-	font-family: courier;
-	font-weight: bold;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
 	font-size: 20px;
 }
 .interviewee {
