@@ -1,7 +1,8 @@
 body{
-	background: white;
+	background: whitesmoke;
 	margin-left: 250px;
 	margin-right:250px;
+	margin-bottom: 60px;
 	padding: 0px;
 }
 h1{
@@ -21,6 +22,9 @@ h5{
 	color: black;
 	font-family: palatino;
 	font-weight: bold;
+}
+li{
+	font-family: helveticaneue, sansserif;
 }
 p{
 	color: black;
