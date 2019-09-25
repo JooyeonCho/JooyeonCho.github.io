@@ -1,0 +1,65 @@
+hr {
+width: 60%;
+height: 2px;
+margin-left: auto;
+margin-right: auto;
+background-color:#666;
+border: 0 none;
+margin-top: 0px;
+margin-bottom: 50px;
+}
+body{
+	background: black;
+	margin-bottom: 100px;
+	padding: 0px;
+	font-family: 'Playfair Display', serif;
+}
+p{
+	background: black;
+	color: white;
+	margin-left: 250px;
+	margin-right: 250px;
+}
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+}
+.title {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+}
+.author {
+  font-size: 20px;
+  font-family: 'playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.interviewer {
+	color: white;
+	font-family: courier;
+	font-weight: bold;
+	font-size: 20px;
+}
+.interviewee {
+	color: white;
+	font-weight: thin;
+}
+.intro {
+	  font-family: 'Playfair Display', serif;
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
