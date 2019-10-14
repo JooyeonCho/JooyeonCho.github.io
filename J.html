@@ -1,23 +1,204 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
-			.circle { 
-			height: 50px;
-			width: 50px;
-			background-color: black;
-			border-radius: 100%}
-			.square {
-  			height: 100px;
-  			width: 50px;
-  			background-color: #555;
+			.wrapper{
+				width: 150px;
+				height: 250px;
+				background: white;
+				display: block;
+				position: relative;
+				margin: auto;
+				margin-top: 3rem;
+				margin-bottom: 3rem;
+				overflow: hidden;
 			}
+			/*j1*/
+			.rectangle1{
+				width: 150px;
+				height: 250px;
+				background: black;
+				position: absolute;
+			}
+			.rectangle2{
+				width: 100px;
+				height: 200px;
+				background: blue;
+				position: absolute;
+				z-index: 2;
+			}
+			.rectangle2:hover{
+
+			}
+			/*j2*/
+			.rectangle3{
+				width: 150px;
+				height: 175px;
+				background: black;
+				position: absolute;
+			}
+			.rectangle4{
+				width: 75px;
+				height: 175px;
+				background: red;
+				position: relative;
+			}
+			.circle1{
+				width: 150px;
+				height: 150px;
+				border-radius: 100%;
+				background: blue;
+				position:absolute;
+				top: 100px;
+			}
+			/*j3*/
+			.oval1{
+				width: 150px;
+				height: 250px;
+				border-radius: 100px;
+				background: black;
+				position: absolute;
+			}
+			.oval2{
+				width: 100px;
+				height: 200px;
+				border-radius: 100px;
+				background: white;
+				position: absolute;
+				top: 25px;
+				left: 25px;
+			}
+			/*j4*/
+			.circle2{
+				width: 50px;
+				height: 50px;
+				border-radius: 25px;
+				background: black;
+				float: right;
+			}
+			.rectangle5{
+				width: 50px;
+				height: 125px;
+				background: black;
+				position: absolute;
+				top: 50px;
+				left: 100px;
+			}
+			/*j5*/
+			.rectangle6{
+				width: 100px;
+				height: 260px;
+				background: #ccc;
+				left: 25px;
+				top: -20px;
+				transform: rotate(20deg);
+				position: absolute;
+			}
+			.rectangle7{
+				width: 75px;
+				height: 235px;
+				background: grey;
+				left: 28px;
+				top: -25px;
+				transform: rotate(20deg);
+				position: absolute;
+			}
+			.checkmark {
+			    display:inline-block;
+			    width: 150px;
+			    height:150px;
+	 			transform: rotate(20deg);
+ 			}
+
+			.checkmark_stem {
+			    position: absolute;
+			    width:25px;
+			    height:275px;
+			    background-color:#ccc;
+			    left:100px;
+			    top: -50px;
+			}
+
+			.checkmark_kick {
+			    position: absolute;
+			    width:100px;
+			    height:25px;
+			    background-color:#ccc;
+			    left:25px;
+			    top:215px;
+			}
+			        #bigcircle {
+            background: transparent;
+            width: 200px;
+            height: 200px;
+            top: 68%;
+            left: -10%;
+            border-radius: 200px;
+            transform: rotate(45deg);
+            border: 20px;
+            border-color: tomato;
+            border-style: solid;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            transform: rotate(135deg);
+            transition: border-right-color 0.5s, border-buttom-color 0.5s, border-top-color 0.5s, width 2s, height 2s, background-color 0.5s, border-radius 1s;
+
+        }
+
+	        #bigcircle:hover {
+	            width: 500px;
+	            height: 500px;
+	            border-right-color: tomato;
+	            border-bottom-color: tomato;
+	            border-top-color: tomato;
+	            z-index: 0;
+	            background: black;
+	            border-radius: 50px;
+
+
+	        }
+
+
 		</style>
 		<title>J</title>
 	</head>
 	<body>
-		<div class="square"></div>
-		<div class="circle"></div>
+		<div id="j1" class="wrapper">
+			<div class="rectangle1"></div>
+			<div class="rectangle2"></div>
+		</div>
+
+		<div id="j2" class="wrapper">
+			<div class="rectangle3"></div>
+			<div class="circle1"></div>
+			<div class="rectangle4"></div>
+		</div>
+		<div id="j3" class="wrapper">
+			<div class="oval1"></div>
+			<div class="oval2"></div>
+		</div>
+		<div id="j4" class="wrapper">
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+			<div class="circle2"></div>
+		</div>
+		<div id="j5" class="wrapper">
+			<div class="rectangle6"></div>
+			<div class="rectangle7"></div>
+		</div>
 	</body>
 </html>
