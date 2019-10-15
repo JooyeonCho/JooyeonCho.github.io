@@ -13,7 +13,29 @@
 				margin: auto;
 				margin-top: 3rem;
 				margin-bottom: 3rem;
+				overflow: visible;
+			}
+			.wrapper_flip{
+				width: 150px;
+				height: 250px;
+				background: white;
+				display: block;
+				position: relative;
+				margin: auto;
+				margin-top: 3rem;
+				margin-bottom: 3rem;
 				overflow: hidden;
+			}
+			.wrapper_spin{
+				width: 150px;
+				height: 250px;
+				background: white;
+				display: block;
+				position: relative;
+				margin: auto;
+				margin-top: 3rem;
+				margin-bottom: 3rem;
+				overflow: visible;
 			}
 			/*j1*/
 			.rectangle1{
@@ -25,12 +47,13 @@
 			.rectangle2{
 				width: 100px;
 				height: 200px;
-				background: blue;
+				background-color: grey;
 				position: absolute;
 				z-index: 2;
 			}
 			.rectangle2:hover{
-
+				width: 400px;
+				transition-timing-function: ease-in-out;
 			}
 			/*j2*/
 			.rectangle3{
@@ -42,14 +65,17 @@
 			.rectangle4{
 				width: 75px;
 				height: 175px;
-				background: red;
+				background: blue;
 				position: relative;
+			}
+			.rectangle4:hover{
+				background-color: red;
 			}
 			.circle1{
 				width: 150px;
 				height: 150px;
 				border-radius: 100%;
-				background: blue;
+				background: black;
 				position:absolute;
 				top: 100px;
 			}
@@ -70,96 +96,101 @@
 				top: 25px;
 				left: 25px;
 			}
+			.breaker{
+				width: 25px;
+				height: 25px;
+				border-radius: 100%;
+				position: absolute;
+				top: 75px;
+				left: 125px;
+				background: black;
+				z-index: 2
+			}
+			.breaker:hover{
+				background: white;
+			}
+			.breaker2{
+				width: 25px;
+				height: 25px;
+				border-radius: 100%;
+				position: absolute;
+				top: 150px;
+				background: black;
+				z-index: 2
+			}
+			.breaker2:hover{
+				background: white;
+			}
 			/*j4*/
 			.circle2{
 				width: 50px;
 				height: 50px;
-				border-radius: 25px;
-				background: black;
+				border-radius: 100%;
+				background: grey;
+				float: left;
+			}
+			.card{
+				width: 50px;
+				height: 50px;
+				border-radius: 100%;
+				position: relative;
+				transition: transform 0.5s;
+				transform-style: preserve-3d;
 				float: right;
 			}
-			.rectangle5{
-				width: 50px;
-				height: 125px;
-				background: black;
+			.face{
+				width: 100%;
+				height: 100%;
+				border-radius: 100%;
 				position: absolute;
-				top: 50px;
-				left: 100px;
+				backface-visibility: hidden;
 			}
+			.front{
+				background-color: grey;
+			}
+			.back{
+				background-color: #0379ff;
+				transform: rotateY(180deg);
+			}
+			.wrapper_flip:hover .card{
+				transform: rotateY(180deg);
+			}
+
 			/*j5*/
-			.rectangle6{
-				width: 100px;
-				height: 260px;
-				background: #ccc;
-				left: 25px;
-				top: -20px;
-				transform: rotate(20deg);
+			.bar1{
+				width: 10px;
+				height: 250px;
+				background: blue;
+				left: 130px;
+				transform: rotate(10deg);
 				position: absolute;
 			}
-			.rectangle7{
+			.wrapper_spin:hover .bar1{
+				transform: rotate(0deg);
+			}
+			.bar2{
 				width: 75px;
-				height: 235px;
-				background: grey;
-				left: 28px;
-				top: -25px;
-				transform: rotate(20deg);
+				height: 10px;
+				background: red;
+				top: 225px;
+				transform: rotate(40deg);
 				position: absolute;
 			}
-			.checkmark {
-			    display:inline-block;
-			    width: 150px;
-			    height:150px;
-	 			transform: rotate(20deg);
- 			}
-
-			.checkmark_stem {
-			    position: absolute;
-			    width:25px;
-			    height:275px;
-			    background-color:#ccc;
-			    left:100px;
-			    top: -50px;
+			.wrapper_spin:hover .bar2{
+				transform: rotate(90deg);
 			}
-
-			.checkmark_kick {
-			    position: absolute;
-			    width:100px;
-			    height:25px;
-			    background-color:#ccc;
-			    left:25px;
-			    top:215px;
+			.bar3{
+				width: 125px;
+				height: 10px;
+				background: yellow;
+				top: 225px;
+				left: 30px;
+				transform: rotate(-20deg);
+				position: absolute;
 			}
-			        #bigcircle {
-            background: transparent;
-            width: 200px;
-            height: 200px;
-            top: 68%;
-            left: -10%;
-            border-radius: 200px;
-            transform: rotate(45deg);
-            border: 20px;
-            border-color: tomato;
-            border-style: solid;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            transform: rotate(135deg);
-            transition: border-right-color 0.5s, border-buttom-color 0.5s, border-top-color 0.5s, width 2s, height 2s, background-color 0.5s, border-radius 1s;
-
-        }
-
-	        #bigcircle:hover {
-	            width: 500px;
-	            height: 500px;
-	            border-right-color: tomato;
-	            border-bottom-color: tomato;
-	            border-top-color: tomato;
-	            z-index: 0;
-	            background: black;
-	            border-radius: 50px;
-
-
-	        }
-
+			.wrapper_spin:hover .bar3{
+				transform: rotate(0deg);
+			}
 
 		</style>
 		<title>J</title>
@@ -178,27 +209,54 @@
 		<div id="j3" class="wrapper">
 			<div class="oval1"></div>
 			<div class="oval2"></div>
+			<div class="breaker"></div>
+			<div class="breaker2"></div>
 		</div>
-		<div id="j4" class="wrapper">
+		<div id="j4" class="wrapper_flip">
 			<div class="circle2"></div>
 			<div class="circle2"></div>
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
 			<div class="circle2"></div>
 			<div class="circle2"></div>
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
 			<div class="circle2"></div>
 			<div class="circle2"></div>
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
+			<div class="card" style="float: left !important;">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
 			<div class="circle2"></div>
-			<div class="circle2"></div>
-			<div class="circle2"></div>
-			<div class="circle2"></div>
-			<div class="circle2"></div>
-			<div class="circle2"></div>
-			<div class="circle2"></div>
-			<div class="circle2"></div>
-			<div class="circle2"></div>
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div>
 		</div>
-		<div id="j5" class="wrapper">
-			<div class="rectangle6"></div>
-			<div class="rectangle7"></div>
+		<div id="j5" class="wrapper_spin">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
 		</div>
 	</body>
 </html>
