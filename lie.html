@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<style type="text/css">
+
+</style>
+
+<body>
+<h1> Did you lie when you said you wanted to work? </h1>
+
+<br><br>
+
+<input type="button" name="confirm" value="Yes" onClick="messageYes()">
+<input type="button" name="confirm" value="No" onClick="message()">
+
+<script type="text/javascript">
+    
+    function messageYes() {
+    alert ('Thank you for being honest.')
+    location.href = 'http://jooyeoncho.github.io/procrastination.html';
+    }
+
+    function messageNo() {
+    ConfirmStatus = confirm("Final Answer?");
+
+    if (ConfirmStatus == true) {
+    location.href = 'http://www.naver.com';
+    }
+
+}
+
+</script>
+</body>
+</html>

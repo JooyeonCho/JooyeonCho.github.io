@@ -1,4 +1,5 @@
 body{
+	font-style: sans-serif;
 	margin: 0px;
 	text-align: center;
 }
@@ -15,7 +16,7 @@ body{
 	overflow: visible;						
 }
 .button1 {
-  background-color: #20B2AA ;
+  background-color: #f4511e;
   border: none;
   color: white;
   height: 60px;
@@ -34,7 +35,7 @@ body{
   opacity: 1
 }
 .button2 {
-  background-color: #f4511e;
+  background-color: #20B2AA;
   border: none;
   color: white;
   height: 60px;
