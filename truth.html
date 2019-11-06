@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>procrastination</title>
+	<title>truth</title>
 </head>
 
 <style type="text/css">
@@ -67,24 +67,24 @@ h1{
 
 <body>
 	<br><br>
-	<h3>Please answer honestly.</h3>
-	<h1>Do you want to...</h1>
+	<h3>I'm sure you <i>want</i> to procrastinate but...</h3>
+	<h1>Do you have work to do?<h1>
 	<br><br>
 	<div class="wrapper">
-		<button class="button1" onClick="routeLie()">Work</button>
-		<button class="button2" onClick="routeTruth()">Procrastinate</button>
+		<button class="button1" onClick="routeTruth()">Yes</button>
+		<button class="button2" onClick="routeLie()">No</button>
 	</div>
 
 	<script type="text/javascript">
    
     function routeLie() {
 
-    ConfirmStatus1 = confirm("Did you mean to click 'work'?");
+    ConfirmStatus1 = confirm("Are you sure about that?");
     if (ConfirmStatus1 == true) {
-    	
-    	ConfirmStatus2 = confirm("Please be honest with your answer. Should we go ahead?");
+    
+    	ConfirmStatus2 = confirm("Not even the slightest of work? Can I proceed?");
     	if (ConfirmStatus2 == true) {
-    		location.href = 'http://jooyeoncho.github.io/lie.html'} 
+    		location.href = 'http://jooyeoncho.github.io/nowork.html'} 
     		else if (ConfirmStatus2 == false) {
     		nothing}}
 
@@ -93,7 +93,7 @@ h1{
     		};}
 
     function routeTruth() {
-	location.href = 'http://jooyeoncho.github.io/truth.html';
+	location.href = 'http://jooyeoncho.github.io/gowork.html';
     }
 	</script>
 </body>

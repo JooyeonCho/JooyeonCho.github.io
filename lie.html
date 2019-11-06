@@ -1,37 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+  <title>procrastination</title>
 </head>
 
 <style type="text/css">
-
+body{
+  font-style: sans-serif;
+  margin: 0px;
+  text-align: center;
+}
+h1{
+  font-style: sans-serif;
+}
+.wrapper{
+  width: 350px;
+  height: 80px;
+  background: transparent;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -175px;
+  overflow: visible;            
+}
+.button1 {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  height: 60px;
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.button1:hover {
+  opacity: 1
+}
+.button2 {
+  background-color: #20B2AA;
+  border: none;
+  color: white;
+  height: 60px;
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.button2:hover {
+  opacity: 1
+}
 </style>
 
 <body>
-<h1> Did you lie when you said you wanted to work? </h1>
+  <br><br>
+  <h3>Why would you come to this website in the first place then?</h3>
+  <h1>Did you lie about wanting to work?</h1>
+  <br><br>
+  <div class="wrapper">
+    <button class="button2" onClick="routeTruth()">Yes</button>
+    <button class="button1" onClick="routeLie()">No</button>
+  </div>
 
-<br><br>
+  <script type="text/javascript">
+   
+    function routeLie() {
+    ConfirmStatus1 = confirm("Are you sure about your answer?");
+    if (ConfirmStatus1 == true) {
+      
+      ConfirmStatus2 = confirm("It's best not to lie to yourself, should we continue?");
+      if (ConfirmStatus2 == true) {
+        location.href = 'http://jooyeoncho.github.io/lie2.html'} 
+        else if (ConfirmStatus2 == false) {
+        nothing}}
+          else if (ConfirmStatus1 == false){
+          nothing
+        };}
 
-<input type="button" name="confirm" value="Yes" onClick="messageYes()">
-<input type="button" name="confirm" value="No" onClick="message()">
-
-<script type="text/javascript">
-    
-    function messageYes() {
-    alert ('Thank you for being honest.')
-    location.href = 'http://jooyeoncho.github.io/procrastination.html';
+    function routeTruth() {
+      alert("Thank you for being honest.");
+      location.href = 'http://jooyeoncho.github.io/truth.html';
     }
-
-    function messageNo() {
-    ConfirmStatus = confirm("Final Answer?");
-
-    if (ConfirmStatus == true) {
-    location.href = 'http://www.naver.com';
-    }
-
-}
-
-</script>
+  </script>
 </body>
 </html>
