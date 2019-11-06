@@ -1,0 +1,54 @@
+body{
+	margin: 0px;
+	text-align: center;
+}
+.wrapper{
+	width: 350px;
+	height: 80px;
+	background: transparent;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: -175px;
+	overflow: visible;						
+}
+.button1 {
+  background-color: #20B2AA ;
+  border: none;
+  color: white;
+  height: 60px;
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.button1:hover {
+  opacity: 1
+}
+.button2 {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  height: 60px;
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.button2:hover {
+  opacity: 1
+}
