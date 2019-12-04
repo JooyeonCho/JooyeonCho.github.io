@@ -9,7 +9,6 @@
           margin:0px;
           border:0px;
           background:transparent;
-          color:white;
         }
         .titlebox {
             display: inline-block;
@@ -18,18 +17,25 @@
             margin: 15px;
             height: 200px;
             z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
-        .class1 { background:#FEC0A6; }
-        .class2 { background:#f0f0f5; }
-        .class3 { background:white; }
         .stripes {
         background-image: repeating-linear-gradient(135deg, DimGray, 60px, #ffdf80 60px, #ffdf80 120px);
         }
+        .center {
+          display: inline;
+          margin-left: auto;
+          margin-right: auto;
+          z-index: 1;
+        }
+
     </style>
 </head>
 <body class="class1">
-    <img id="title" class="toggle, titlebox" src="img/scabtitle.png" style="position:absolute; top:0; left:0;"/>
-    <div id="content"></div>
+    <div><img id="title" class="toggle, titlebox" src="img/scabtitle.png"/></div>
+    <div id="content" class="center"></div>
 <!--
 <a href="#" class="toggle">Toggle classes</a>
 <div class="class1">...</div>
