@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+    #month {
+    width: 8%;
+    height: 50px;
+    font-size: 13pt;
+    padding: 20px 20px;
+    border: solid white;
+    border-radius: 4px;
+    color: white;
+    margin-right: 3px;
+}
+#day{
+    width: 8%;
+    height: 50px;
+    font-size: 13pt;
+    border: solid white;
+    border-radius: 4px;
+    color: white;
+    margin-right: 3px;
+    position: relative;
+}
+#submit {
+   background-color: #0038FF;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+   letter-spacing: 4px;
+   margin-top: 40px;
+}
+#dateEnter {
+  color: white;
+  text-align: center;
+  margin-top: 380px;
+  line-height: 3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#dateEnter h1 {
+  font-size: 16px;
+ font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px;
+    margin-top: -30px;
+    margin-bottom:20px; 
+}
+span {
+  content: "\21E9";
+}
+
+#dateEnter select {
+  color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    font-weight:700;
+    letter-spacing: 4px;
+}
+<body>
+<div id="dateEnter">
+    <form>
+   <img src="images/zod.png" class="image1">
+      <div class="title"><h1><span>⇩</span>BIRTHDAY<span>⇩</span></h1></div>
+      <select id="day">
+          <option>DAY</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+
+      <select id="month">
+        <option>MONTH</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+    </form>
+    <button id="submit" class="btn btn-success" onclick="showSign()">FIND MY SIGN</button>
+    <br>
+  </div>
+  <script type="text/javascript">
+    var day = document.getElementById("day").value;
+    var month = document.getElementById("month").value;
+  transition()
+  if (month == 1) {
+    if (day <= 19) {
+
+      document.getElementById("capricorn").style.display = "block";
+      document.body.className = "test";
+    } else if (day > 19) {
+      document.getElementById("aquarius").style.display = "block"
+       document.body.className = "test2";
+       //body will have a class named type 2
+    }
+  } else if (month == 2) {
+    if (day <= 18) {
+      document.getElementById("aquarius").style.display = "block"
+      document.body.className = "test2";
+    } else if (day > 18) {
+      document.getElementById("pisces").style.display = "block"
+      document.body.className = "test3";
+    }
+  } else if (month == 3) {
+    if (day <= 20) {
+      document.getElementById("pisces").style.display = "block"
+      document.body.className = "test3";
+    } else if (day > 20) {
+      document.getElementById("aries").style.display = "block"
+      document.body.className = "test4";
+    }
+  } else if (month == 4) {
+    if (day <= 19) {
+      document.getElementById("aries").style.display = "block"
+      document.body.className = "test4";
+    } else if (day > 19) {
+      document.getElementById("taurus").style.display = "block"
+      document.body.className = "test5";
+
+    }
+  } else if (month == 5) {
+    if (day <= 20) {
+      document.getElementById("taurus").style.display = "block"
+      document.body.className = "test5";
+    } else if (day > 20) {
+      document.getElementById("gemini").style.display = "block"
+      document.body.className = "test6";
+    }
+  } else if (month == 6) {
+    if (day <= 20) {
+      document.getElementById("gemini").style.display = "block"
+      document.body.className = "test6";
+    } else if (day > 20) {
+      document.getElementById("cancer").style.display = "block"
+      document.body.className = "test7";
+    }
+  } else if (month == 7) {
+    if (day <= 22) {
+      document.getElementById("cancer").style.display = "block"
+      document.body.className = "test7";
+    } else if (day > 22) {
+      document.getElementById("leo").style.display = "block"
+      document.body.className = "test8";
+    }
+  } else if (month == 8) {
+    if (day <= 22) {
+      document.getElementById("leo").style.display = "block"
+      document.body.className = "test8";
+    } else if (day > 22) {
+      document.getElementById("virgo").style.display = "block"
+      document.body.className = "test9";
+    }
+  } else if (month == 9) {
+    if (day <= 22) {
+      document.getElementById("virgo").style.display = "block"
+      document.body.className = "test9";
+    } else if (day > 22) {
+      document.getElementById("libra").style.display = "block"
+      document.body.className = "test10";
+    }
+  } else if (month == 10) {
+    if (day <= 22) {
+      document.getElementById("libra").style.display = "block"
+      document.body.className = "test10";
+    } else if (day > 22) {
+      document.getElementById("scorpio").style.display = "block"
+      document.body.className = "test11";
+    }
+  } else if (month == 11) {
+    if (day <= 21) {
+      document.getElementById("scorpio").style.display = "block"
+      document.body.className = "test11";
+    } else if (day > 21) {
+      document.getElementById("sagittarius").style.display = "block"
+      document.body.className = "test12";
+    }
+  } else if (month == 12) {
+    if (day <= 22) {
+      document.getElementById("sagittarius").style.display = "block"
+      document.body.className = "test12";
+    } else if (day > 22) {
+      document.getElementById("capricorn").style.display = "block"
+      document.body.className = "test";
+    }
+  }
+  
+}  
+  </script>
+</body>
+</html>
+

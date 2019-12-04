@@ -1,168 +1,62 @@
-<!DOCTYPE html>
 
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>Drop and Drag Game</title>
+    <title>test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="don't.css">
 </head>
 <body>
-    <style>
-        .box001 {
-            float: left;
-            width: 75px;
-            height: 15px;
-            margin: 12px;
-            padding: 10px;
-            border: 1px solid black;
-        }
+<h1 id="title" onclick="changeTitle()">Don't Pick the Scab</h1>
 
-        .box002 {
-            float: left;
-            width: 75px;
-            height: 15px;
-            margin: 12px;
-            padding: 10px;
-            border: 1px solid white;
-        }
-    </style>
-    <div class="box002" ondrop="drop001(event)">
-        <text ondragstart="dragStart001(event)" draggable="true" id="target001">Motivation</text>
+<!-- Different versions of similar function
+
+<p id="demo">Don't Pick the Scab</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p id="title" onclick="changeTitle()">Don't Pick the Scab</p> -->
+    <div>
+        <img id="myimage" src="img/scab1.svg" style="display:none" width="400" class="center" onclick="scratchScab" />
+        <img id="myimagee" src="img/scab2.svg" style="display:none" width="400" class="center" />
+        <img id="myimageee" src="img/scab3.svg" style="display:none" width="400" class="center" />
+        <img id="myimageeee" src="img/scab4.svg" style="display:none" width="400" class="center" />
     </div>
-
-    <div class="box002" ondrop="drop002(event)">
-        <text ondragstart="dragStart002(event)" draggable="true" id="target002">Expectancy</text>
-    </div>
-
-    <div class="box002" ondrop="drop003(event)">
-        <text ondragstart="dragStart003(event)" draggable="true" id="target003">Value</text>
-    </div>
-
-    <div class="box002" ondrop="drop004(event)">
-        <text ondragstart="dragStart004(event)" draggable="true" id="target004">Impulsiveness</text>
-    </div>
-
-    <div class="box002" ondrop="drop005(event)">
-        <text ondragstart="dragStart005(event)" draggable="true" id="target005">Delay</text>
-    </div>
-    <br /><br /><br /><br />
-
-    <div class="box001" ondrop="drop006(event)" ondragover="allowDrop001(event)" id="place001">1</div>
-
-    <div class="box001" ondrop="drop007(event)" ondragover="allowDrop002(event)" id="place002">2</div>
-
-    <div class="box001" ondrop="drop008(event)" ondragover="allowDrop003(event)" id="place003">3</div>
-
-    <div class="box001" ondrop="drop009(event)" ondragover="allowDrop004(event)" id="place004">4</div>
-
-    <div class="box001" ondrop="drop010(event)" ondragover="allowDrop005(event)" id="place005">5</div><br /><br /><br />
-    
-    <button onclick="submit001()">Submit</button>
-    <p id="message001"></p>
-
-    <script>
-    var b = 0;
-    b++;
-function dragStart001(event) {
-    event.dataTransfer.setData("choice001", event.target.id);
-}
-
-function dragStart002(event) {
-    event.dataTransfer.setData("choice002", event.target.id);
-}
-
-function dragStart003(event) {
-    event.dataTransfer.setData("choice003", event.target.id);
-}
-
-function dragStart004(event) {
-    event.dataTransfer.setData("choice004", event.target.id);
-} 
-
-function dragStart005(event) {
-    event.dataTransfer.setData("choice005", event.target.id);
-}
-
-function allowDrop001(event) {
-    event.preventDefault();
-}
-
-function allowDrop002(event) {
-    event.preventDefault();
-}
-
-function allowDrop003(event) {
-    event.preventDefault();
-}
-
-function allowDrop004(event) {
-    event.preventDefault();
-}
-
-function allowDrop005(event) {
-    event.preventDefault();
-}
-
-function drop006(event) {
-    var data = event.dataTransfer.getData("choice001");
-    event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
-        place001.innerHTML = "Jerusalem";
-}
-
-function drop007(event) {
-    var data = event.dataTransfer.getData("choice002");
-    event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
-        place002.innerHTML = "Amman";
-}
-
-function drop008(event) {
-    var data = event.dataTransfer.getData("choice003");
-    event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
-        place003.innerHTML = "London";
-}
-
-function drop009(event) {
-    var data = event.dataTransfer.getData("choice004");
-    event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
-        place004.innerHTML = "Brasilia";
-}
-
-function drop010(event) {
-    var data = event.dataTransfer.getData("choice005");
-    event.target.appendChild(document.getElementById(data));
-score001.innerHTML = b++;
-        place005.innerHTML = "Ottawa";
-}
-
-function drop001(event) {
-    event.preventDefault();
-}
-
-function drop002(event) {
-    event.preventDefault();
-}
-
-function drop003(event) {
-    event.preventDefault();
-
-}
-
-function drop004(event) {
-    event.preventDefault();
-}
-
-function drop005(event) {
-    event.preventDefault();
-}
-
-function submit001() {
-if (b > 5) {
-message001.innerHTML = "Congratulations.";
-}
-}
-    </script>
 </body>
+
+<script>
+
+/* this is for the other version
+
+function changeTitle() {
+document.getElementById("title").innerHTML = "Don't Pop the Bubble";
+} */
+
+function changeTitle() {
+    var x=document.getElementById("title").innerHTML;
+if(x=="Don't Pick the Scab"){
+document.getElementById("title").innerHTML="Don't Burst the Bubble";}
+
+if(x=="Don't Burst the Bubble")
+document.getElementById("title").innerHTML="Don't Pop the Zit";
+
+if(x=="Don't Pop the Zit")
+document.getElementById("title").innerHTML="Don't Pick the Scab";
+}
+
+setTimeout(function(){
+document.getElementById('myimage').style.display = 'block';
+},0);
+        setTimeout(function(){
+    document.getElementById('myimagee').style.display = 'block';
+},2000);
+    setTimeout(function(){
+    document.getElementById('myimageee').style.display = 'block';
+},4000);
+    setTimeout(function(){
+    document.getElementById('myimageeee').style.display = 'block';
+},6000);
+
+
+</script>
 </html>
+

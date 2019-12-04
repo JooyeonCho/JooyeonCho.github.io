@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Don't</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="don't.css">
+</head>
+<body>
+    <!-- title img -->
+    <div>
+        <img id="titleimg" class="titlebox" src="img/scabtitle.png" onmouseover="this.style.cursor='pointer'" onclick="chngimg(); chngbg();" />
+    </div>
+    <!-- scab images -->
+    <div>
+        <img id="scab1" src="img/scab1.svg" style="display:none" width="400" class="center" />
+        <img id="scab2" src="img/scab2.svg" style="display:none" width="400" class="center" />
+        <img id="scab3" src="img/scab3.svg" style="display:none" width="400" class="center" />
+        <img id="scab4" src="img/scab4.svg" style="display:none" width="400" class="center" />
+    </div>
+
+<!-- javascript from here -->
+<script language="javascript" type="text/javascript">
+/* title onlick changes - title img + bg color */ 
+function chngimg() {
+    var img = document.getElementById('titleimg').src;
+    if (img.indexOf('scabtitle.png')!=-1) {
+        document.getElementById('titleimg').src  = 'img/bubbletitle.png'; document.body.style.backgroundColor = "#f0f0f5"
+    }
+    else if (img.indexOf('bubbletitle.png')!=-1) {
+        document.getElementById('titleimg').src  = 'img/buttontitle.png'; document.body.style.backgroundColor = "White"
+    }
+    else {
+        document.getElementById('titleimg').src = 'img/scabtitle.png'; document.body.style.backgroundColor = "#FEC0A6"
+    }
+}
+
+/* scab illustration */
+setTimeout(function(){
+    document.getElementById('scab1').style.display = 'block';
+},0);
+        setTimeout(function(){
+    document.getElementById('scab2').style.display = 'block';
+},2000);
+    setTimeout(function(){
+    document.getElementById('scab3').style.display = 'block';
+},4000);
+    setTimeout(function(){
+    document.getElementById('scab4').style.display = 'block';
+},6000);
+
+</script>
+</body>
+</html>

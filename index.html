@@ -1,9 +1,111 @@
+<!DOCTYPE html>
 <html>
-		<head></head>
-		<body>
-			<h1>Hello World!</h1>
-			<a href="http://JooyeonCho.github.io/CarlDair.html">Seven Principles of Typographic Contrast</a>
-			<br>
-			<a href="https://jooyeoncho.github.io/Interview.html">Parasite Interview</a>
-		</body>
+<head>
+	<title>Hello World</title>
+</head>
+
+<style type="text/css">
+#project1 {
+  position: absolute;
+  left: 200px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  color: white;
+}
+
+#project2 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+</style>
+
+<body>
+	<h1>Hello World!</h1>
+	<div id="project2">
+		<div id="mydivheader">Click here to move</div>
+		<a href="https://jooyeoncho.github.io/Interview.html">Parasite Interview</a>
+	</div>
+	<!-- Draggable DIV -->
+	<div id="project1">
+	  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+	  <div id="mydivheader">Click here to move</div>
+	  <a href="http://JooyeonCho.github.io/CarlDair.html">Seven Principles of Typographic Contrast</a>
+	</div>
+	
+	<script type="text/javascript">
+			// Make the DIV element draggable:
+	dragElement(document.getElementById("project1"));
+	dragElement(document.getElementById("project2"));
+
+	function dragElement(elmnt) {
+	  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+	  if (document.getElementById(elmnt.id + "header")) {
+	    // if present, the header is where you move the DIV from:
+	    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+	  } else {
+	    // otherwise, move the DIV from anywhere inside the DIV:
+	    elmnt.onmousedown = dragMouseDown;
+	  }
+
+	  function dragMouseDown(e) {
+	    e = e || window.event;
+	    e.preventDefault();
+	    // get the mouse cursor position at startup:
+	    pos3 = e.clientX;
+	    pos4 = e.clientY;
+	    document.onmouseup = closeDragElement;
+	    // call a function whenever the cursor moves:
+	    document.onmousemove = elementDrag;
+	  }
+
+	  function elementDrag(e) {
+	    e = e || window.event;
+	    e.preventDefault();
+	    // calculate the new cursor position:
+	    pos1 = pos3 - e.clientX;
+	    pos2 = pos4 - e.clientY;
+	    pos3 = e.clientX;
+	    pos4 = e.clientY;
+	    // set the element's new position:
+	    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+	    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+	  }
+
+	  function closeDragElement() {
+	    // stop moving when mouse button is released:
+	    document.onmouseup = null;
+	    document.onmousemove = null;
+	  }
+	}
+
+for (var i=1; i <= 3; i++) {
+    // Minimum 0 and maximum 60%. You can change that.  
+    var x = Math.max(0, Math.min(60, Math.ceil(Math.random() * 100)));
+    var y = Math.max(0, Math.min(60, Math.ceil(Math.random() * 100)));
+    $('<div />').css({
+        position: 'absolute',
+        width: '300px',
+        height: '100px',
+        top: y + '%',
+        left: x + '%',
+        'background-color': 'rgba(0,0,0,' + Math.random() + ')'
+    }).text('top:' + y + ', left:' + x).appendTo('body');
+}
+
+	</script>
+
+</body>
 </html>

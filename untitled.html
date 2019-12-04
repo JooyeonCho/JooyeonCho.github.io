@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>really testing shit</title>
+    <link type="text/css" rel="stylesheet" href="don't.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $("button").click(function(){
+        $("#box").load("");
+    });
+});
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h2>Click button to load new content inside DIV box</h2>
+    </div>
+    <button type="button">Load Content</button>
+<!-- jquery exploration 
+<img id="scabtitle" class="titlebox" src="img/scabtitle.png"/>
+<script type="text/javascript">
+$("#scabtitle").on({
+    'click':function(){
+        $("#scabtitle").attr('src', 'img/bubbletitle.png');
+        $("body").css('background-color', '#f0f0f5');
+    }
+});
+</script> -->
+
+</body>
+</html>
