@@ -3,8 +3,36 @@
 <head>
 	<title>bubble</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body{
+			margin: 0px;
+			border: 0px;
+			padding: 0px;
+		}
+		.wrapper{
+			width: 100vw;
+			height: 100vh;
+			display: block;
+			position: absolute;
+			border: 0px;
+			padding: 0px;
+			margin: 0px;
+			overflow: hidden;
+		}
+	</style>
 </head>
 <body>
-
+	<div class="wrapper">
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="100vw" height="100vh" id="bubblewrap">
+	    <param name=movie value="virtual-bubblewrap-distv1.1.swf">
+	    <param name=loop value=false>
+	    <param name=menu value=false>
+	    <param name=quality value=high>
+	    <embed src="virtual-bubblewrap-distv1.1.swf" loop=false menu=false quality=high  width="1461" height="900" 
+	 type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+	    </embed>
+	  </object>
+	</div>
 </body>
 </html>

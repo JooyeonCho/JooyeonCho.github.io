@@ -26,6 +26,6 @@ h1{
 }
 .pattern {min-height:200px;}
 
-#stripes13 {
+#stripes {
 background-image: repeating-linear-gradient(135deg, Black, 60px, #ffc400 60px, #ffc400 120px);
 }
