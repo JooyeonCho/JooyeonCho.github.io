@@ -3,9 +3,26 @@
 <head>
 	<title>button</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		html, body, #wrapper {
+		   height:100%;
+		   width: 100%;
+		   margin: 0;
+		   padding: 0;
+		   border: 0;
+		}
+		#wrapper td {
+		   vertical-align: middle;
+		   text-align: center;
+		}
+	</style>
 </head>
 <body>
-<img src="img/buttonup.png" id="button">
+<table id="wrapper">
+  <tr>
+    <td><img src="img/buttonup.png" id="button" /></td>
+  </tr>
+</table>
 <script type="text/javascript">
 	$(document).ready(function(){
   var flag = 0;  
