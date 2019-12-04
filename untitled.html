@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>really testing shit</title>
-    <link type="text/css" rel="stylesheet" href="don't.css">
+    <title>UGHHH</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="don't.css">
     <script>
+        /* tutorial code
         $(document).ready(function(){
-    $("button").click(function(){
-        $("#box").load("");
-    });
-});
+         $("img").click(function(){
+            $("#box").load("https://jooyeoncho.github.io/scab.html");
+         });
+        });
+        */
     </script>
 </head>
-<body>
-    <div id="box">
-        <h2>Click button to load new content inside DIV box</h2>
-    </div>
-    <button type="button">Load Content</button>
-<!-- jquery exploration 
-<img id="scabtitle" class="titlebox" src="img/scabtitle.png"/>
-<script type="text/javascript">
-$("#scabtitle").on({
-    'click':function(){
-        $("#scabtitle").attr('src', 'img/bubbletitle.png');
-        $("body").css('background-color', '#f0f0f5');
-    }
-});
-</script> -->
 
+<body class="class1">
+<img src="img/scabtitle.png" class="toggle" style="height: 200px;">
+<!-- tutorial code
+<div id="example1">
+    <div class="user">
+        <img class="Image" src="img/scabtitle.png" style="height: 200px;">
+   </div>
+</div>
+<div id="box"></div>
+-->
+<script type="text/javascript">
+    $('.toggle').click(function () {
+        $('body').each(function(){
+            var classes = ['class1','class2','class3'];
+            this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
+        });
+    });
+</script>
 </body>
-</html>
+</html>                            
