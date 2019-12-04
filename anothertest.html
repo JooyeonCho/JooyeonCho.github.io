@@ -5,14 +5,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<style type="text/css">
 		div {
-		  padding:10px;
+		  padding:0px;
+		  margin:0px;
+		  border:0px;
 		  background:transparent;
 		  color:white;
-		  margin-top:10px;
 		}
-		.class1 { background:#FEC0A6; }
-		.class2 { background:#f0f0f5; }
-		.class3 { background:white; }
 		.titlebox{
 			display: inline-block;
 			padding: 0px;
@@ -20,6 +18,9 @@
 			margin: 15px;
 			height: 200px;
 		}
+		.class1 { background:#FEC0A6; }
+		.class2 { background:#f0f0f5; }
+		.class3 { background:white; }
 	</style>
 </head>
 <body class="class1">
@@ -42,7 +43,7 @@
 	      flag = 1;
 	    }
 	    else if(flag == 1) {
-	      $("#title").attr("src","img/buttontitle.png"); document.body.style.backgroundColor = "White"
+	      $("#title").attr("src","img/buttontitle.png"); document.body.style.background = "#stripes13"
 	      $("#content").load("https://jooyeoncho.github.io/button.html");
 	      flag = 2;
 	  	}
