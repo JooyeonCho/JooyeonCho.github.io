@@ -9,6 +9,8 @@
     }
 	.small {
 		position: absolute;
+		left: 600px;
+		top: 300px;
 		width: 5%;
 	}
     </style>
@@ -16,54 +18,54 @@
 <body>
 	<!-- random pos -->
 	<div id="gamespace" style="position:relative;"></div>
-	<div id="scar">
+
+	<div id="scabby">
 	    <img id="scab1" src="img/scab1.svg" style="display:none" width="400" class="small" />
 	    <img id="scab2" src="img/scab2.svg" style="display:none" width="400" class="small" />
 	    <img id="scab3" src="img/scab3.svg" style="display:none" width="400" class="small" />
 	    <img id="scab4" src="img/scab4.svg" style="display:none" width="400" class="small" />
     </div>
-    <div id="testimg">
-    	<img src="img/smile.png" />
-    </div>
+
 
     <script type="text/javascript">
+
     	/* random position */
-    	var t;
+    	/*var t;
 		var xPos;
 		var yPos;
 		var w = $(window).width();
 		var h = $(window).height();
-		var rando = '<div style = img.src= "img/smile.png"; position:absolute; top:'+xPos+'px; left:'+yPos+'px;"></div>';
-		var $rando = $(rando);
+		var rando = '<div id="scar" style=position:absolute; top:'+xPos+'px; left:'+yPos+'px;";></div>';
+		var smile = '<img alt="scab" src="img/smile.png" style="position:absolute; top:'+xPos+'px; left:'+yPos+'px;" />';
+		var scabby = 
 
 		$(document).ready(function(){
 			setTimeout(function(){
-				start();
+				addMole();
 			}, 1000);
 		});//end.ready
 		
-		function start(){
-			addMole();
-			$("h1").css("color","#005b7f");
-			$("#gamespace").css("backgroundColor","#cdeaf5");
-		};//end start 
 		function randPosX(){
-			return Math.floor(Math.random()* h - 50, 50);
+			return Math.floor(Math.random()* h-50, 50);
 		};//end x
 		function randPosY(){
-			return Math.floor(Math.random()* w - 50, 50);
+			return Math.floor(Math.random()* w-50, 50);
 		};//end y
 		function addMole(){
 			console.log(xPos, yPos);
 			xPos = randPosX();
 			yPos = randPosY();
-			$("#gamespace").append(rando);
-			t=setTimeout(addMole, 2000);
-		};//end mole
+			$("#gamespace").append(rando) 
 
-    	/* scab illustration */
+			//$("#gamespace").append('<div id="scar"></div>');
+
+			t=setTimeout(addMole, 2000);
+		};//end mole*/
+
+    	//scab illustration
 		setTimeout(function(){
 		    document.getElementById('scab1').style.display = 'block';
+		    $
 		},0);
 		setTimeout(function(){
 		    document.getElementById('scab2').style.display = 'block';
@@ -81,97 +83,11 @@
 		setTimeout(function(){
 			$('#scab4').stop();
 		},7500)
-    </script>
 
+		document.getElementById('scabby').addEventListener('click', function(){
+			clearTimeout()
+    	})
+
+    </script>
 </body>
 </html>
-
-<!--
-	<!DOCTYPE html>
-<html>
-<head>
-    <title>scab</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-    	/* random position */
-		var xPos;
-		var yPos;
-		$(document).ready(function(){
-			//change this part to setTimeout
-			$("#start_button").click(function(){
-				start();
-			});//end start_button
-		});//end.ready
-		function start(){
-			addMole();
-			$("h1").css("color","#005b7f");
-			$("#gamespace").css("backgroundColor","#cdeaf5");
-		};//end start 
-		function randPosX(){
-			return Math.floor(Math.random()*300);
-		};//end x
-		function randPosY(){
-			return Math.floor(Math.random()*600);
-		};//end y
-		function addMole(){
-			console.log(xPos, yPos);
-			xPos = randPosX();
-			yPos = randPosY();
-			$("#gamespace").append('<img alt="Mole" src="img/mole.png" style="position:absolute; top:'+xPos+'px; left:'+yPos+'px;" />');
-			
-			t=setTimeout(addMole, 2000000);
-		};//end mole
-
-    	/* scab illustration */
-		setTimeout(function(){
-		    document.getElementById('scab1').style.display = 'block';
-		},0);
-		setTimeout(function(){
-		    document.getElementById('scab2').style.display = 'block';
-		},1000);
-		setTimeout(function(){
-		    document.getElementById('scab3').style.display = 'block';
-		},2000);
-		setTimeout(function(){
-		    document.getElementById('scab4').style.display = 'block';
-		    $("img#scab1, img#scab2, img#scab3").hide();
-		},3000);
-		setTimeout(function(){
-			$('img#scab4').fadeOut(5000);
-		},4000)
-		setTimeout(function(){
-			$('#scab4').stop();
-		},7500)
-    </script>
-    <style type="text/css">
-    body {
-    	background-color: #FEC0A6;
-    }
-	.center {
-		position: absolute;
-		margin-left: auto;
-		margin-right: auto;
-		width: 5%;
-	}
-    </style>
-</head>
-<body>
-	//random pos
-	<div id="content">
-		<div id="controls">
-			<button type="button" id="start_button">Start!</button>
-			</div>
-				<div id="gamespace" style="position:relative;">			
-			</div>
-		</div>
-
-    <div id="scar">
-        <img id="scab1" src="img/scab1.svg" style="display:none" width="400" class="center" />
-        <img id="scab2" src="img/scab2.svg" style="display:none" width="400" class="center" />
-        <img id="scab3" src="img/scab3.svg" style="display:none" width="400" class="center" />
-        <img id="scab4" src="img/scab4.svg" style="display:none" width="400" class="center" />
-    </div>
-</body>
-</html>
-
---?
