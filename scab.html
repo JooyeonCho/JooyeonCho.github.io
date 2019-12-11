@@ -47,21 +47,17 @@
 			$("h1").css("color","#005b7f");
 			$("#gamespace").css("backgroundColor","#cdeaf5");
 		};//end start 
-		
 		function randPosX(){
 			return Math.floor(Math.random()* h - 50, 50);
 		};//end x
 		function randPosY(){
 			return Math.floor(Math.random()* w - 50, 50);
 		};//end y
-
 		function addMole(){
 			console.log(xPos, yPos);
 			xPos = randPosX();
 			yPos = randPosY();
-
-
-			$("#gamespace").append($rando);
+			$("#gamespace").append(rando);
 			t=setTimeout(addMole, 2000);
 		};//end mole
 
