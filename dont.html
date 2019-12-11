@@ -20,6 +20,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            background: transparent;
         }
         .stripes {
         background-image: repeating-linear-gradient(135deg, DimGray, 60px, #ffdf80 60px, #ffdf80 120px);
@@ -34,7 +35,7 @@
     </style>
 </head>
 <body class="class1">
-    <div><img id="title" class="toggle, titlebox" src="img/scabtitle.png"/></div>
+    <div><img id="title" class="toggle, titlebox" src="img/scabtitle.png" onmouseover="this.style.cursor='pointer'"/></div>
     <div id="content" class="center"></div>
 <!--
 <a href="#" class="toggle">Toggle classes</a>
