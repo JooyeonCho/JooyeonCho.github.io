@@ -7,7 +7,6 @@
 <style type="text/css">
 #project1 {
   position: absolute;
-  left: 200px;
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
@@ -17,10 +16,45 @@
 
 #project2 {
   position: absolute;
+  left: 400px;
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
-  text-align: center;
+  text-align: center;dddddd
+}
+#project3 {
+  position: absolute;
+  left: 600px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;dddddd
+}
+#project4 {
+  position: absolute;
+  top: 200px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;dddddd
+}
+#project5 {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;dddddd
+}
+#project6 {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;dddddd
 }
 
 #mydivheader {
@@ -34,21 +68,43 @@
 
 <body>
 	<h1>Hello World!</h1>
-	<div id="project2">
-		<div id="mydivheader">Click here to move</div>
-		<a href="https://jooyeoncho.github.io/Interview.html">Parasite Interview</a>
-	</div>
-	<!-- Draggable DIV -->
 	<div id="project1">
-	  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-	  <div id="mydivheader">Click here to move</div>
+	  <div id="mydivheader">Exercise 2 & 3</div>
 	  <a href="http://JooyeonCho.github.io/CarlDair.html">Seven Principles of Typographic Contrast</a>
 	</div>
 	
+	<div id="project2">
+		<div id="mydivheader">Exercise 4</div>
+		<a href="https://jooyeoncho.github.io/Interview.html">Parasite Interview</a>
+	</div>
+	
+	<div id="project3">
+		<div id="mydivheader">Exercise 5 & 6</div>
+		<a href="https://jooyeoncho.github.io/J.html">CSS Letterforms: J</a>
+	</div>
+
+	<div id="project4">
+		<div id="mydivheader">Hyperlinked Set</div>
+		<a href="https://jooyeoncho.github.io/Interview.html">Windows 95 Games</a>
+	</div>
+
+	<div id="project5">
+		<div id="mydivheader">Input/Output</div>
+		<a href="https://jooyeoncho.github.io/Interview.html">Procrastination Matrix</a>
+	</div>
+
+	<div id="project6">
+		<div id="mydivheader">Change Over Time</div>
+		<a href="https://jooyeoncho.github.io/Interview.html">Don't</a>
+	</div>
 	<script type="text/javascript">
 			// Make the DIV element draggable:
 	dragElement(document.getElementById("project1"));
 	dragElement(document.getElementById("project2"));
+	dragElement(document.getElementById("project3"));
+	dragElement(document.getElementById("project4"));
+	dragElement(document.getElementById("project5"));
+	dragElement(document.getElementById("project6"));
 
 	function dragElement(elmnt) {
 	  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
